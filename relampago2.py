@@ -51,3 +51,89 @@ assert x == None #não recomendado
 assert x is None # recomendado
 
 #Página 29
+
+#Boolenas em Python são True e False
+
+# None == null
+
+# assert funciona como um conferidor de código, caso a condição do assert não seja verdadeira ele vai lançar um erro
+
+a = 2
+
+# assert a > 4 AssertionError
+assert a < 4
+
+x = None
+assert x == None # não é uma boa escrita
+assert x is None # é uma boa escrita
+
+# Falsy e Truthy 
+
+# false são valores que não servem para testes lógicos, porque de uma vez vão ser falsos
+# Truthy vão ser valores que vão servir para testes lógicos porque são verdadeiros ex
+
+def uma_funcao_que_retorna_string():
+    return None
+    # return "Hello"
+
+s = uma_funcao_que_retorna_string()
+
+if s:
+    primeiro_char = s[0]
+else:
+    primeiro_char = "None"
+    
+print(primeiro_char)
+
+#forma breve e complexa
+primeiro_char = s and s[0]
+
+#and retorna um segundo valor quando o primeiro é Truthy e o primeiro quando ele não é, por isso x deve ser um número ou None
+
+safe_x = x or 0
+print(safe_x)
+
+#x = 2
+
+safe_x = x if x is not None else 0
+print(safe_x)
+
+
+#logo se pode usar diretamente o if para procurar listas, strings, dicionarios vazios...
+
+
+# funções any e all
+#any retorna true se pelo menos um valor é verdadeiro
+
+x = any([2, 3, 1]) # True
+y = any([False, None, 1]) # True
+z = any([False, None, 0]) # False
+print(x, y, z)
+
+# all retorna True somente se todas forem verdadeiras
+
+x = all([2, 3, 1]) # True
+y = all([False, None, 1]) # False
+z = all([False, None, 0]) # False
+print(x, y, z)
+
+### SORT ###
+#todo método tem o sort e o sorted
+
+#sort organiza no próprio método
+x = [2, 1, 9, 33, 12, 310, 10]
+x.sort()
+print(x)
+
+# sorted organiza em outro método
+
+y = [2, 1, 1, 3, 2, 3, 1, 2]
+z = sorted(y)
+print(z)
+
+#reverso é só usar o parametro reversed=true
+
+z = sorted(y, reverse=True)
+print(z)
+
+# 
