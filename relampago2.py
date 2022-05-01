@@ -1,3 +1,4 @@
+from cgitb import small
 from collections import Counter
 from tkinter.messagebox import NO
 c = Counter([0, 1, 2, 3, 3, 4, 3, 9])
@@ -136,4 +137,56 @@ print(z)
 z = sorted(y, reverse=True)
 print(z)
 
-# 
+# Compreensão de Listas / Transformar uma lista em outra diretamente
+
+num = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+num_par = [num for num in range(5) if num % 2 == 0]
+
+# coloca-se um for para percorrer os 5 primeiros digitos de num, se esse for par então coloca-se no vetor
+
+print(num_par)
+
+quadrados = [num * num for num in range(10)]
+print(quadrados)
+# num * num (quadrado) para cada numero de 0 a 10
+
+quadrados_pares = [num * num for num in num_par]
+# num * num para todos numeros em num_par
+
+print(quadrados_pares)
+
+#Também podemos usar essa construção na hora de criar um dicionário
+
+dict_quadrados = {num: num * 2 for num in num} # chave num vai receber significado num * num
+
+print(dict_quadrados)
+
+set_quadrados = {num * num for num in [1, -1]} # {1}
+
+print(set_quadrados)
+
+# Quando não se precisa do valor, mas somente da chave podemos usar o underline
+
+zeros = [0 for _ in num_par]
+
+print(zeros)
+
+#Uma compreensão de lista pode conter multiplos fors
+
+pairs = [(num, num_par)
+            for num in range(10)
+            for num_par in range(num+1, 10)]
+
+print(pairs)
+
+#Assert são feitos para testar o código
+
+assert 1 + 1 == 2
+assert 1 + 1 == 2, "1 + 1 devia ser igual a 2"
+
+def menor_item(xs):
+    return min(xs)
+
+assert menor_item([10, 20, 5, 40]) == 10, "Não é o menor número"
+assert menor_item([1, 0, -1, 2]) == -1
