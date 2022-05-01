@@ -188,5 +188,6 @@ assert 1 + 1 == 2, "1 + 1 devia ser igual a 2"
 def menor_item(xs):
     return min(xs)
 
-assert menor_item([10, 20, 5, 40]) == 10, "Não é o menor número"
+assert menor_item([10, 20, 5, 40]) == 5, "Não é o menor número"
 assert menor_item([1, 0, -1, 2]) == -1
+
