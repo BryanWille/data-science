@@ -1,7 +1,7 @@
 entr = ""
 while entr != "0 0":
     entr = input()
-    entrada = entr.split()
+    entrada = entr.split(" ")
     num_part = int(entrada[0])
     num_probl = int(entrada[1])
 
