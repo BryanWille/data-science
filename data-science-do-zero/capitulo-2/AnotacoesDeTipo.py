@@ -12,7 +12,7 @@ def concat_texto(quant_vezes: int, texto: str) -> str:
 
 #Não restrigem o tipo de dado de entrada, apenas avisa antes
 
-def soma(num: List[float]) -> float:
+def soma(num: typing.List[float]) -> float:
     return sum(num)
 
 #Como anotações são objetos podemos atribuir tipo a elas, exemplo:
@@ -24,12 +24,12 @@ def soma2(x: Number, y: Number) -> Number:
 
 from optparse import Option
 import typing
-def soma2(x: Optional[float]): 
+def soma2(x: typing.Optional[float]): 
     return x
 
 # e tmbém podemos usar o Callable para funções de primeiro grau, o u seja que pegam de outra função ex
 
-def twice(repeater: Callable[[str, int], str], s: str) -> str:
+def twice(repeater: typing.Callable[[str, int], str], s: str) -> str:
     return repeater(s,2)
 
 def comma_repeater(s: str, n: int) -> str:
