@@ -1,0 +1,42 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+Formação Cientista de Dados: O Curso Completo
+
+```{r}
+X <- c(1,2,3,4,5,6)
+```
+
+o C no R significa Combine, e o vetor começa pelo 1, difernte das outras linguagens -_-
+
+**Possuem apenas um tipo de dados**
+
+No R matrizes possuem apenas um tipo de dado.
+
+Então para contornar isso é usado o DataFrame, é uma matriz que pode receber dados
+diferentes.
+
+Acessar dataframe por:
+*Dataframe$coluna*
+
+Listas:
+Objetos com estruturas diferentes, varios juntos.
+
+uma lista é que nem no python, pode receber outras coisas.
+
+
+Fatores:
+Estrutura que pode ser organizada.
+
+```{r}
+install.packages("e1071")
+library(e1071)
+```
+```{r}
+detach("package:e1071", unload=TRUE);
+remove.packages("e1071")
+
+plot(iris[,1:4])
+```
+
