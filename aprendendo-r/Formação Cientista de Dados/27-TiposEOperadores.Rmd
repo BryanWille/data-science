@@ -1,0 +1,78 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+R tem tipagem dinâmica.
+
+
+```{r}
+sigma = 20
+
+class(sigma)
+
+```
+Então algumas vezes você tem que fazer o casting
+
+```{r}
+sigma = 20L #Onde L força a ser Integer
+
+class(sigma)
+```
+Outros tipos primitivos
+
+```{r}
+logico = TRUE # ou T mas precisa ser maiusculo
+logico = F # ou FALSE
+
+caractere = "Texto" # ou 'Texto'
+class(logico)
+class(caractere)
+```
+
+Operações matemáticas
+
+```{r}
+c = 2
+d = 4
+
+c ** 8 # Potência que nem python
+4 / 3 # Decimal pois ó tipo é numeric
+4 %/% 3L # Parte inteira da divisão
+4 %% 3 # Resto da Divisão
+
+
+(c + d) * d #Printa pois não está atribuindo a ninguém
+e = (c + d) * d
+e # Printa pois não está atribuindo a ninguém
+```
+
+
+Testes lógicos
+```{r}
+a = 1 
+b = 2
+a < 2 # TRUE
+b == a # FALSE
+```
+
+Assim como todas as outras linguagems possui funções built-in
+
+
+```{r}
+sqrt(2500)
+abs(-325)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Principais métodos e funções usadas
+
+Head or Tail
+
+```{r}
+#Seleciona a primeira e últimas linhas respectivamente, as 6 últimas ou primeiras
+
+esoph
+#por default é 6
+
+head(esoph)
+tail(esoph)
+
+head(esoph, n=11) # n = quantidade de linhas primeiras ou últimas
+
+```
+
+Dimensões
+
+```{r}
+dim(esoph)
+#Tamanho x por y
+dim(esoph)[1] # 88
+dim(esoph)[2] # 5
+# As vezes quer usar o numero total de colunas
+
+```
+
+Comprimento  de um vetor
+
+```{r}
+v <- c(1, 2, 3, 4, 5, 6, 7, 8)
+length(v)
+```
+Nomes de colunas
+```{r}
+colnames(esoph)
+```
+Nome de linhas
+```{r}
+rownames(esoph)
+```
+Resumo estatístico de uma amostra
+```{r}
+summary(esoph)
+```
+Entrada de Arquivos
+```{r}
+x = file.choose()
+x
+#Por padrão x é o diretório do arquivo não o arquivo em si.
+```
+
+
+
+
+
+
+
+

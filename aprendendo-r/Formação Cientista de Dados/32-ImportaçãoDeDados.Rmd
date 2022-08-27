@@ -1,0 +1,37 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Importações de tipos de arquivos
+
+CSV (Comma Separated Value)
+
+```{r}
+
+#readcsv() retorna um dataframe
+
+arquivo = read.csv(file.choose(), header=TRUE, sep=",") #por padrão header e sep são esses.
+
+arquivo
+#ou 
+
+
+#arquivo = read.csv("nomearquivo.csv", header=TRUE, sep";")
+
+
+```
+
+
+Arquivos de Excel (XLSX)
+
+
+```{r}
+
+#install.packages("xlsx")
+library(xlsx) #usando o pacote
+
+dados = read.xlsx(file.choose(), sheetIndex=1) # Onde sheetIndex é a posição da planilha no arquivo.
+
+```
+

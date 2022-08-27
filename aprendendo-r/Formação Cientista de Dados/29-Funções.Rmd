@@ -1,0 +1,42 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+Funções
+Pegam algo e retornam algo assim como matemáticamente é descrita
+f(x) = 22x + 2
+
+
+f(4) = 90
+f(4) = 22 * 4 + 2
+
+
+```{r}
+getwd() #Podem não retornar nada
+#São delimitadas por ()
+#quando não se delimita abre uma caixa de erro
+getwd
+#que pode ser útil para saber os parametros (o que seria x)
+
+#pode ou não ter um valor padrão, e vc pode especificar qual paramentro é qual
+
+head(x=iris, n=2) #especificando padrão
+head(iris) #colocando só um valor
+head(iris,2) #colocando parametros na ordem
+head(n=2) #precisa do argumento padrão o qual não tem
+```
+
+Declaração
+
+```{r}
+
+funcaoQualquer <- function(x){
+  y = 22 * x + 2
+  return(y) # se não ouver return ira retornar a última atribuição
+}
+
+print(funcaoQualquer(4))
+
+
+```
+

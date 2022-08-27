@@ -1,0 +1,76 @@
+---
+title: "AspectosDiversos"
+output: html_document
+date: "2022-08-27"
+---
+
+Diretório de Trabalho.
+
+```{r}
+getwd()
+# qualquer diretório aqui setwd("")
+
+```
+Tipo de Objeto é usando class()
+```{r}
+print(class(print)) #tipo função
+class(iris) #tipo data frame
+```
+
+Salvar um objeto qualquer
+
+#Se pode salvar um objeto em R em disco, para depois carregar novamente. 
+
+```{r}
+iristeste = iris #copiando
+
+save(iristeste, file="iristeste.Rdata") #precisa salvar do tipo .Rdata
+
+
+rm(iristeste) #descarrega a variavel iristeste
+
+iristeste #Vai dar erro pois está descarregada
+```
+
+Carregar um objeto qualquer já salvo:
+
+```{r}
+load(file="iristeste.Rdata") # carregando
+
+class(iristeste) # tipo de classe (pois já foi carregado)
+```
+Vetor
+
+#Basicamente mesma coisa só que com c(numero,numero...)
+```{r}
+
+vetorX <- c(1, 2, 3, 4, 5) #precisa do c de Combine
+print(vetor)
+
+vetorY <- c(10, 20, 30, 40, 50)
+
+plot(vetorX, vetorY) # plotando um gráfico básico
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

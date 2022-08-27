@@ -1,0 +1,56 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+if condicional
+```{r}
+a = 10
+b = 20
+if (a < b ){
+  print("Verdadeiro")
+} else if (a == b){
+  print("Igual")
+} else {
+  print("Falso")
+}
+```
+Operador Ternário - ifelse
+```{r}
+
+x = ifelse(a > 10, "A é maior que 10", "A é menor ou igual que 10")
+x
+```
+for - repetição
+```{r}
+
+for(i in 1:10){
+  print(i)
+}
+
+```
+
+while
+```{r}
+a = 1
+while( a <= 100){
+  print(a)
+  a = a + 1
+}
+```
+
+função
+
+```{r}
+
+parouimpar <- function(x) {
+  
+  return(ifelse(x%%2 == 0, "Par", "Impar"))
+  
+}
+
+parouimpar(7)
+parouimpar(2312)
+
+```
+
+

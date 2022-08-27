@@ -1,0 +1,180 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Vetores
+
+Agrupamento unidimensional de dados. ou seja só uma linha ou coluna.
+
+```{r}
+
+x = c(1, 2, 3, 4, 5, 6) # Vetores só possuem um tipo.
+x
+x[1] # Vetores começam no 1, diferente das outras linguagens.
+x[1] = 10 
+x[1]
+
+# Podemos ter outros tipos
+
+Y = c("ab", "bc", "cd") # String
+Y
+class(Y)
+
+Z = c(1L, 2L, 3L) # Integer
+Z
+class(Z)
+
+# Também pode ser criado assim:
+
+vetor <- 1:30
+
+vetor
+
+```
+Matrizes
+
+Agrupamento de dados bidimensional, ou seja linhas E colunas.
+```{r}
+VADeaths # matriz já pronta do R
+
+colnames(VADeaths) # Nome colunas
+rownames(VADeaths) # Nome Linhas
+```
+
+
+Criação de Matrizes
+
+Matrix()
+
+```{r}
+#Criação de Matriz
+
+# matriz(data=vetor, nrow=NumeroDeLinhas, ncol = NumeroColunas, byRow=PorLinhaOuColuna T | F)
+
+#Primeiro precisa de um vetor
+
+vetor <- 1:20
+
+A <- matrix(vetor, 4, 5, byrow=T); # Caso o número de elementos seja diferente 
+# vai haver reciclagem dos números anteriores.
+
+A
+
+B <- matrix(vetor, 4, 5, byrow=F);
+
+B
+
+#Matrizes também só possuem um tipo
+```
+
+
+RBind e CBind()
+
+```{r}
+#Outra maneira é usando o CBINd e Rbind
+
+#Criamos novamente os vetores primeiros
+
+col1 <- c("MG", "SP", "RJ")
+col2 <- c("MT", "GO", "BR")
+col3 <- c("PR", "RS", "SC")
+
+cbind(col1, col2, col3)
+
+
+rbind(col1, col2, col3)
+
+
+
+```
+
+Navegação Matrizes
+
+
+```{r}
+
+VADeaths
+
+#Só o primeiro Elemento
+VADeaths[1,1]
+
+#Só a primeira linha
+VADeaths[1,]
+
+#Só a primeira coluna
+VADeaths[,1]
+
+#Linhas 1 até 3
+VADeaths[1:3,]
+
+#Colunas 1 3 4
+VADeaths[,c(1, 3, 4)]
+
+
+```
+
+Data Frame
+
+São como matrizes só que dinamicamente tipadas.
+
+
+```{r}
+longley
+
+longley[,1:4]
+
+#Colunas podem aser acessadas com $ ou com seu nome
+
+longley$Unemployed
+
+longley['Unemployed']
+
+```
+
+Listas
+
+
+São varias estruturas de dados aninhadas, em um unico objeto, uma lista de objetos.
+
+
+```{r}
+# Essa lista possui $cov que é uma matriz
+# $center que é um int
+# $n.obs que tbm é um int
+
+ability.cov # lista padrão
+
+ability.cov$cov
+
+class(ability.cov$cov) #matrix
+class(ability.cov$center) # numeric
+class(ability.cov$n.obs) #numeric
+
+#se pode acessar e manipular estruturas diretamente nela
+
+ability.cov$cov[,c(1,3,5)]
+
+
+```
+
+Fatores
+
+
+```{r}
+state.region
+
+#Rankeia valores
+#FAcilita quantas vezes alguma coisa aparece, ou em IA para ele saber o que está brincando com.
+
+```
+
+
+
+
+
+
+
+
+
+

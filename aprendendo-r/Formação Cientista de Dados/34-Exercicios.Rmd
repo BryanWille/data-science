@@ -1,0 +1,78 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Exercício 1
+
+```{r}
+
+ana <- 8
+paulo <- 12
+
+if (ana > paulo){
+  print("A menina é mais velha")
+} else if (ana == paulo){
+  print("Ambos tem a mesma idade")
+} else {
+  print("O menino é mais velho")
+}
+
+```
+
+Exercício 2
+
+```{r}
+class(BOD)
+```
+
+Exercício 3
+```{r}
+v <- 1:10
+for(x in v)
+  if(x %% 2 == 0)
+    print(x)
+
+```
+
+Exercício 4
+```{r}
+
+tail(women, n=10)
+```
+
+Exercicio 5
+```{r}
+
+irisMetade = iris[50:100,]
+irisMetade
+plot(irisMetade$Sepal.Width, irisMetade$Petal.Length)
+
+```
+
+
+Exercício 6
+
+```{r}
+f <- 23:34
+g <- 93:104
+h <- 3:14
+
+for(i in 1:12){
+  h[i] = f[i] + g[i] 
+}
+h
+```
+
+Exercicio 7
+
+```{r}
+
+dim(CO2)[1]
+dim(CO2)[2]
+
+rownames(CO2)
+colnames(CO2)
+
+```
+

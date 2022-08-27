@@ -1,0 +1,25 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Pacotes:
+#São usados para se obter alguma funcionalidade já pronta e mais fácil, resumidamente
+
+```{r}
+install.packages("e1071") # instala um pacote
+
+library(e1071) # iniciar o pacote
+
+```
+
+Descarregar e Desinstalar um Pacote
+
+
+```{r}
+detach("package:e1071", unload=TRUE) # descarregando
+
+remove.packages("e0171") # remove o pacote.
+
+```
+
